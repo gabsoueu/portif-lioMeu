@@ -1,0 +1,494 @@
+﻿
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gabriel Alexandre Fernandes Neves | Portfólio</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+
+:root{
+    --primary:#ffcb05;
+    --secondary:#ff4d4d;
+    --accent:#2ec4b6;
+    --dark:#111;
+    --light:#fffdf5;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--light);
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color:var(--dark);
+    overflow-x:hidden;
+    background-image:
+        radial-gradient(circle at 20% 20%, rgba(0,0,0,.05) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(0,0,0,.05) 1px, transparent 1px);
+    background-size:15px 15px;
+}
+
+
+h1,h2,h3,h4,h5{
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:2px;
+}
+
+
+.navbar{
+    background:var(--dark);
+    border-bottom:5px solid var(--primary);
+}
+
+.navbar-brand,
+.nav-link{
+    color:white !important;
+    font-weight:bold;
+}
+
+.nav-link:hover{
+    color:var(--primary) !important;
+}
+
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:black;
+    position:relative;
+}
+
+.hero-panel{
+    background:white;
+    border:4px solid black;
+    box-shadow:8px 8px 0 black;
+    padding:2rem;
+}
+
+.hero h1{
+    font-size:clamp(2.5rem,5vw,5rem);
+}
+
+.hero-image{
+    height:400px;
+    background:#ddd;
+    border:4px solid black;
+    box-shadow:8px 8px 0 black;
+}
+
+
+.comic-panel{
+    background:white;
+    border:4px solid black;
+    box-shadow:8px 8px 0 black;
+    transition:.3s;
+}
+
+.comic-panel:hover{
+    transform:translateY(-5px);
+}
+
+
+.project-image{
+    height:220px;
+    background:linear-gradient(135deg,#ccc,#eee);
+    border-bottom:4px solid black;
+}
+
+.card{
+    border:none;
+    background:transparent;
+}
+
+.badge-custom{
+    background:var(--accent);
+    color:black;
+    font-size:.8rem;
+}
+
+
+.about-image{
+    height:350px;
+    background:#ddd;
+    border:4px solid black;
+}
+
+
+.contact-box{
+    background:white;
+    border:4px solid black;
+    box-shadow:8px 8px 0 black;
+}
+
+
+.btn-comic{
+    background:var(--secondary);
+    color:white;
+    border:3px solid black;
+    font-weight:bold;
+}
+
+.btn-comic:hover{
+    background:var(--primary);
+    color:black;
+}
+
+
+.fade-up{
+    opacity:0;
+    transform:translateY(30px);
+    animation:fadeUp .8s ease forwards;
+}
+
+.fade-up:nth-child(2){
+    animation-delay:.2s;
+}
+
+.fade-up:nth-child(3){
+    animation-delay:.4s;
+}
+
+@keyframes fadeUp{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+@media (max-width:1200px){
+    :root{
+        --primary:#7bdff2;
+        --secondary:#f15bb5;
+        --accent:#fee440;
+    }
+}
+
+@media (max-width:768px){
+    :root{
+        --primary:#90be6d;
+        --secondary:#f94144;
+        --accent:#f9c74f;
+    }
+
+    .hero{
+        text-align:center;
+        padding-top:100px;
+    }
+
+    .hero-image{
+        margin-top:2rem;
+    }
+}
+
+@media (max-width:500px){
+    :root{
+        --primary:#9b5de5;
+        --secondary:#00bbf9;
+        --accent:#00f5d4;
+    }
+}
+
+footer{
+    background:black;
+    color:white;
+}
+
+</style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Gabriel Neves</a>
+
+        <button class="navbar-toggler bg-light" data-bs-toggle="collapse" data-bs-target="#menu">
+            ☰
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<section class="hero">
+<div class="container">
+<div class="row align-items-center g-4">
+
+<div class="col-lg-7 fade-up">
+<div class="hero-panel">
+
+<span class="badge badge-custom mb-3">
+Cineasta • Artista Audiovisual
+</span>
+
+<h1>
+Gabriel Alexandre Fernandes Neves
+</h1>
+
+<p id="bio">
+Meu nome é Gabriel, obviamente, e desde pequeno sou apaixonado por cinema, quadrinhos, jogos e animação, sou crítico e sempre tento entregar o melhor trabalho que posso, sei como contar uma boa história, tenho grandes ambições, mas deixe eu mostrar ao invés de apenas contar...
+</p>
+
+
+<a href="#projetos" class="btn btn-dark">
+Ver Projetos
+</a>
+
+</div>
+</div>
+
+<div class="col-lg-5 fade-up">
+<div class="hero-image d-flex justify-content-center align-items-center">
+<strong>
+[ ADICIONE SUA FOTO AQUI ]
+</strong>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="sobre" class="py-5">
+<div class="container">
+
+<h2 class="text-center mb-5">Sobre Mim</h2>
+
+<div class="row g-4 align-items-center">
+
+<div class="col-md-5">
+<div class="about-image d-flex justify-content-center align-items-center">
+<strong>
+[ IMAGEM / BANNER DA BIOGRAFIA ]
+</strong>
+</div>
+</div>
+
+<div class="col-md-7">
+<div class="comic-panel p-4">
+
+<p>
+Sou um cineasta e artista audiovisual apaixonado por narrativas,
+linguagem cinematográfica, cultura pop e novas formas de expressão.
+Minha inspiração vem do cinema, dos quadrinhos, dos videogames e da animação.
+</p>
+
+<p>
+Busco criar obras que provoquem reflexão, emoção e impacto visual,
+sempre combinando criatividade, técnica e identidade autoral.
+</p>
+
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="projetos" class="py-5">
+<div class="container">
+
+<h2 class="text-center mb-5">Projetos</h2>
+
+<div class="row g-4">
+
+<div class="col-lg-4 col-md-6">
+<div class="card comic-panel h-100">
+
+<div class="project-image d-flex align-items-center justify-content-center">
+<strong>[ IMAGEM DO PROJETO ]</strong>
+</div>
+
+<div class="card-body">
+
+<span class="badge badge-custom">
+Curta-Metragem
+</span>
+
+<h3 class="mt-3">
+Sopa de Pedra
+</h3>
+
+<p>
+Adaptação do conto de mesmo nome.
+Primeira produção oficial da aroC.
+</p>
+
+<p><strong>Ano:</strong> 2026</p>
+
+<p>
+<strong>Link:</strong>
+[ ADICIONAR LINK ]
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card comic-panel h-100">
+
+<div class="project-image d-flex align-items-center justify-content-center">
+<strong>[ IMAGEM DO PROJETO ]</strong>
+</div>
+
+<div class="card-body">
+
+<span class="badge badge-custom">
+Videoclipe
+</span>
+
+<h3 class="mt-3">
+I Won't Go Home Without You
+</h3>
+
+<p>
+Videoclipe musical fan-made inspirado na aclamada música da banda Maroon 5.
+</p>
+
+<p><strong>Ano:</strong> 2026</p>
+
+<p>
+<strong>Link:</strong>
+[ ADICIONAR LINK ]
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6">
+<div class="card comic-panel h-100">
+
+<div class="project-image d-flex align-items-center justify-content-center">
+<strong>[ IMAGEM DO PROJETO ]</strong>
+</div>
+
+<div class="card-body">
+
+<span class="badge badge-custom">
+Vídeo Arte
+</span>
+
+<h3 class="mt-3">
+Inteligência Atrofiante
+</h3>
+
+<p>
+Projeto 100% autoral.
+Uma crítica artística ao uso indevido da inteligência artificial.
+</p>
+
+<p><strong>Ano:</strong> 2026</p>
+
+<p>
+<strong>Link:</strong>
+[ ADICIONAR LINK ]
+</p>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section id="contato" class="py-5">
+<div class="container">
+
+<h2 class="text-center mb-5">Contato</h2>
+
+<div class="contact-box p-5 text-center">
+
+<h3>Vamos conversar?</h3>
+
+<p>
+Email:
+<a href="mailto:gabrielafneves2008+port@gmail.com">
+gabrielafneves2008+port@gmail.com
+</a>
+</p>
+
+<p>
+Instagram:
+<a href="https://www.instagram.com/gabrielneves615" target="_blank">
+@gabrielneves615
+</a>
+</p>
+
+<p>
+Produtora:
+<a href="https://www.instagram.com/aroc.filmes" target="_blank">
+@aroc.filmes
+</a>
+</p>
+
+<a href="mailto:gabrielafneves2008+port@gmail.com"
+class="btn btn-comic">
+Enviar Email
+</a>
+
+</div>
+
+</div>
+</section>
+
+<footer class="text-center py-4">
+© 2026 • Gabriel Alexandre Fernandes Neves • Portfólio Audiovisual
+</footer>
+
+<script>
+
+let klingon = false;
+
+function toggleLanguage(){
+
+const bio = document.getElementById("bio");
+
+if(!klingon){
+    bio.innerText = bio.dataset.kl;
+    klingon = true;
+}
+else{
+    bio.innerText = bio.dataset.pt;
+    klingon = false;
+}
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
